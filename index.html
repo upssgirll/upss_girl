@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Галерея продукту</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: #111;
+    }
+    .photo-block {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    .photo-block img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .photo-block img:hover {
+      transform: scale(1.05);
+    }
+    .order-btn {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 15px 35px;
+      background: #2c2c2c; /* мокрий асфальт */
+      color: #fff;
+      border: 1px solid rgba(200, 200, 200, 0.4); /* світло-сірий розпливчастий контур */
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+      backdrop-filter: blur(2px);
+    }
+    .order-btn:hover {
+      background: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="photo-block">
+    <img src="1.jpg" alt="Фото 1">
+    <a href="#order" class="order-btn">Замовити</a>
+  </div>
+  <div class="photo-block">
+    <img src="2.jpg" alt="Фото 2">
+    <a href="#order" class="order-btn">Замовити</a>
+  </div>
+  <div class="photo-block">
+    <img src="3.jpg" alt="Фото 3">
+    <a href="#order" class="order-btn">Замовити</a>
+  </div>
+  <div class="photo-block">
+    <img src="4.jpg" alt="Фото 4">
+    <a href="#order" class="order-btn">Замовити</a>
+  </div>
+  <div class="photo-block">
+    <img src="5.jpg" alt="Фото 5">
+    <a href="#order" class="order-btn">Замовити</a>
+  </div>
+  <div class="photo-block">
+    <img src="6.jpg" alt="Фото 6">
+    <a href="#order" class="order-btn">Замовити</a>
+  </div>
+  <div class="photo-block">
+    <img src="7.jpg" alt="Фото 7">
+    <a href="#order" class="order-btn">Замовити</a>
+  </div>
+  <div class="photo-block">
+    <img src="8.jpg" alt="Фото 8">
+    <a href="#order" class="order-btn">Замовити</a>
+  </div>
+  <div class="photo-block">
+    <img src="9.jpg" alt="Фото 9">
+    <a href="#order" class="order-btn">Замовити</a>
+  </div>
+  <div class="photo-block">
+    <img src="10.jpg" alt="Фото 10">
+    <a href="#order" class="order-btn">Замовити</a>
+  </div>
+
+</body>
+</html>
