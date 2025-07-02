@@ -11,18 +11,28 @@
       background: #fff;
       color: #111;
     }
-    .photo-block {
+    .photo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 85%;
+      margin: 50px auto;
+      gap: 30px;
+    }
+    .photo-content {
       position: relative;
-      width: 100%;
+      flex: 1 1 600px;
+      max-width: 800px;
       overflow: hidden;
     }
-    .photo-block img {
+    .photo-content img {
       width: 100%;
       height: auto;
       display: block;
       transition: transform 0.4s ease;
     }
-    .photo-block img:hover {
+    .photo-content img:hover {
       transform: scale(1.05);
     }
     .order-btn {
@@ -43,100 +53,144 @@
     .order-btn:hover {
       background: #444;
     }
-    .text-overlay {
-      position: absolute;
-      bottom: 70px; /* вище кнопки */
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90%;
-      max-width: 600px;
-      background: rgba(0,0,0,0.4); /* напівпрозорий чорний фон */
-      color: #fff;
-      padding: 15px 20px;
-      border-radius: 5px;
-      text-align: center;
-      backdrop-filter: blur(2px);
+    .description-box {
+      flex: 1 1 300px;
+      max-width: 400px;
+      background: rgba(240,240,240,0.7);
+      padding: 20px;
+      border-radius: 10px;
     }
-    .text-overlay h2 {
+    .description-box h2 {
       margin: 0 0 10px;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
     }
-    .text-overlay p {
+    .description-box p {
       margin: 0;
       font-size: 1rem;
+    }
+    @media (max-width: 768px) {
+      .photo-container {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 30px 0;
+      }
+      .description-box {
+        margin-top: 20px;
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="photo-block">
-    <img src="1.jpg" alt="Фото 1">
-    <div class="text-overlay">
+  <div class="photo-container">
+    <div class="photo-content">
+      <img src="1.jpg" alt="Фото 1">
+      <a href="#order" class="order-btn">Замовити</a>
+    </div>
+    <div class="description-box">
       <h2>Товар 1</h2>
       <p>Сучасний стиль, висока якість матеріалів.</p>
     </div>
-    <a href="#order" class="order-btn">Замовити</a>
   </div>
 
-  <div class="photo-block">
-    <img src="2.jpg" alt="Фото 2">
-    <a href="#order" class="order-btn">Замовити</a>
+  <div class="photo-container">
+    <div class="photo-content">
+      <img src="2.jpg" alt="Фото 2">
+      <a href="#order" class="order-btn">Замовити</a>
+    </div>
+    <div class="description-box">
+      <h2>Товар 2</h2>
+      <p>Стильна модель для щоденного використання.</p>
+    </div>
   </div>
 
-  <div class="photo-block">
-    <img src="3.jpg" alt="Фото 3">
-    <div class="text-overlay">
+  <div class="photo-container">
+    <div class="photo-content">
+      <img src="3.jpg" alt="Фото 3">
+      <a href="#order" class="order-btn">Замовити</a>
+    </div>
+    <div class="description-box">
       <h2>Товар 3</h2>
       <p>Комфорт та надійність у кожній деталі.</p>
     </div>
-    <a href="#order" class="order-btn">Замовити</a>
   </div>
 
-  <div class="photo-block">
-    <img src="4.jpg" alt="Фото 4">
-    <a href="#order" class="order-btn">Замовити</a>
+  <div class="photo-container">
+    <div class="photo-content">
+      <img src="4.jpg" alt="Фото 4">
+      <a href="#order" class="order-btn">Замовити</a>
+    </div>
+    <div class="description-box">
+      <h2>Товар 4</h2>
+      <p>Легкість і сучасні технології.</p>
+    </div>
   </div>
 
-  <div class="photo-block">
-    <img src="5.jpg" alt="Фото 5">
-    <div class="text-overlay">
+  <div class="photo-container">
+    <div class="photo-content">
+      <img src="5.jpg" alt="Фото 5">
+      <a href="#order" class="order-btn">Замовити</a>
+    </div>
+    <div class="description-box">
       <h2>Товар 5</h2>
       <p>Елегантність та практичність.</p>
     </div>
-    <a href="#order" class="order-btn">Замовити</a>
   </div>
 
-  <div class="photo-block">
-    <img src="6.jpg" alt="Фото 6">
-    <a href="#order" class="order-btn">Замовити</a>
-  </div>
-
-  <div class="photo-block">
-    <img src="7.jpg" alt="Фото 7">
-    <div class="text-overlay">
-      <h2>Товар 7</h2>
-      <p>Легкість та сучасні технології.</p>
+  <div class="photo-container">
+    <div class="photo-content">
+      <img src="6.jpg" alt="Фото 6">
+      <a href="#order" class="order-btn">Замовити</a>
     </div>
-    <a href="#order" class="order-btn">Замовити</a>
+    <div class="description-box">
+      <h2>Товар 6</h2>
+      <p>Якість перевірена часом.</p>
+    </div>
   </div>
 
-  <div class="photo-block">
-    <img src="8.jpg" alt="Фото 8">
-    <a href="#order" class="order-btn">Замовити</a>
+  <div class="photo-container">
+    <div class="photo-content">
+      <img src="7.jpg" alt="Фото 7">
+      <a href="#order" class="order-btn">Замовити</a>
+    </div>
+    <div class="description-box">
+      <h2>Товар 7</h2>
+      <p>Інноваційні рішення для зручності.</p>
+    </div>
   </div>
 
-  <div class="photo-block">
-    <img src="9.jpg" alt="Фото 9">
-    <div class="text-overlay">
+  <div class="photo-container">
+    <div class="photo-content">
+      <img src="8.jpg" alt="Фото 8">
+      <a href="#order" class="order-btn">Замовити</a>
+    </div>
+    <div class="description-box">
+      <h2>Товар 8</h2>
+      <p>Оптимальне співвідношення ціни та якості.</p>
+    </div>
+  </div>
+
+  <div class="photo-container">
+    <div class="photo-content">
+      <img src="9.jpg" alt="Фото 9">
+      <a href="#order" class="order-btn">Замовити</a>
+    </div>
+    <div class="description-box">
       <h2>Товар 9</h2>
       <p>Ідеальний вибір для кожного дня.</p>
     </div>
-    <a href="#order" class="order-btn">Замовити</a>
   </div>
 
-  <div class="photo-block">
-    <img src="10.jpg" alt="Фото 10">
-    <a href="#order" class="order-btn">Замовити</a>
+  <div class="photo-container">
+    <div class="photo-content">
+      <img src="10.jpg" alt="Фото 10">
+      <a href="#order" class="order-btn">Замовити</a>
+    </div>
+    <div class="description-box">
+      <h2>Товар 10</h2>
+      <p>Витончений дизайн для сучасного користувача.</p>
+    </div>
   </div>
 
 </body>
