@@ -14,7 +14,7 @@
     .photo-container {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap;
       max-width: 85%;
       margin: 50px auto;
@@ -41,9 +41,9 @@
       left: 50%;
       transform: translateX(-50%);
       padding: 15px 35px;
-      background: #2c2c2c; /* мокрий асфальт */
+      background: #2c2c2c;
       color: #fff;
-      border: 1px solid rgba(200, 200, 200, 0.4); /* світло-сірий розпливчастий контур */
+      border: 1px solid rgba(200, 200, 200, 0.4);
       border-radius: 5px;
       text-decoration: none;
       font-weight: 600;
@@ -83,17 +83,29 @@
 </head>
 <body>
 
+  <!-- Товар 1 -->
   <div class="photo-container">
     <div class="photo-content">
-      <img src="1.jpg" alt="Фото 1">
+      <img src="1.jpg" alt="Nike Zoom Fly 5 Green Black">
       <a href="#order" class="order-btn">Замовити</a>
     </div>
     <div class="description-box">
-      <h2>Товар 1</h2>
-      <p>Сучасний стиль, висока якість матеріалів.</p>
+      <h2>Nike Zoom Fly 5 Green Black</h2>
+      <p>
+        Артикул: A3022<br>
+        Ціна: <b>1800 → 1400 грн</b><br>
+        Виробник: Вʼєтнам<br>
+        Верх: текстиль<br>
+        Колір: зелений<br>
+        Підошва: піна + гумовий протектор<br>
+        Розміри: 41-45<br>
+        Сезон: весна/літо/осінь<br>
+        Комплектація: коробка Nike, фірмовий папір
+      </p>
     </div>
   </div>
 
+  <!-- Інші товари з шаблонним описом (заміни під себе) -->
   <div class="photo-container">
     <div class="photo-content">
       <img src="2.jpg" alt="Фото 2">
@@ -101,7 +113,7 @@
     </div>
     <div class="description-box">
       <h2>Товар 2</h2>
-      <p>Стильна модель для щоденного використання.</p>
+      <p>Короткий опис товару 2. Заміни під свої дані.</p>
     </div>
   </div>
 
@@ -112,7 +124,7 @@
     </div>
     <div class="description-box">
       <h2>Товар 3</h2>
-      <p>Комфорт та надійність у кожній деталі.</p>
+      <p>Короткий опис товару 3. Заміни під свої дані.</p>
     </div>
   </div>
 
@@ -123,7 +135,7 @@
     </div>
     <div class="description-box">
       <h2>Товар 4</h2>
-      <p>Легкість і сучасні технології.</p>
+      <p>Короткий опис товару 4. Заміни під свої дані.</p>
     </div>
   </div>
 
@@ -134,7 +146,7 @@
     </div>
     <div class="description-box">
       <h2>Товар 5</h2>
-      <p>Елегантність та практичність.</p>
+      <p>Короткий опис товару 5. Заміни під свої дані.</p>
     </div>
   </div>
 
@@ -145,7 +157,7 @@
     </div>
     <div class="description-box">
       <h2>Товар 6</h2>
-      <p>Якість перевірена часом.</p>
+      <p>Короткий опис товару 6. Заміни під свої дані.</p>
     </div>
   </div>
 
@@ -156,7 +168,7 @@
     </div>
     <div class="description-box">
       <h2>Товар 7</h2>
-      <p>Інноваційні рішення для зручності.</p>
+      <p>Короткий опис товару 7. Заміни під свої дані.</p>
     </div>
   </div>
 
@@ -167,7 +179,7 @@
     </div>
     <div class="description-box">
       <h2>Товар 8</h2>
-      <p>Оптимальне співвідношення ціни та якості.</p>
+      <p>Короткий опис товару 8. Заміни під свої дані.</p>
     </div>
   </div>
 
@@ -178,7 +190,7 @@
     </div>
     <div class="description-box">
       <h2>Товар 9</h2>
-      <p>Ідеальний вибір для кожного дня.</p>
+      <p>Короткий опис товару 9. Заміни під свої дані.</p>
     </div>
   </div>
 
@@ -189,7 +201,29 @@
     </div>
     <div class="description-box">
       <h2>Товар 10</h2>
-      <p>Витончений дизайн для сучасного користувача.</p>
+      <p>Короткий опис товару 10. Заміни під свої дані.</p>
+    </div>
+  </div>
+
+  <!-- Підсумковий блок -->
+  <div class="photo-container">
+    <div class="description-box">
+      <h2>Оплата і доставка</h2>
+      <p>
+        Оплата: післяплата<br>
+        Доставка: Нова Пошта, 1-2 дні (відправка день в день при замовленні до 17:00)
+      </p>
+    </div>
+  </div>
+
+  <div class="photo-container">
+    <div class="description-box">
+      <h2>Зв’язок і наявність</h2>
+      <p>
+        Для замовлення: <a href="https://t.me/artem_black_owl" target="_blank">@artem_black_owl</a><br><br>
+        <a href="https://docs.google.com/spreadsheets/d/1R-Nv4l0IWGCKkHAws3BCGWkKIIyttftmsczZVxUsvGI/edit#gid=63912725" target="_blank">Перевірити наявність у Google таблиці</a><br>
+        <a href="https://easydrop.one/supplier-catalog/19100792694610/0/" target="_blank">Каталог моделей у CRM</a>
+      </p>
     </div>
   </div>
 
