@@ -43,46 +43,97 @@
     .order-btn:hover {
       background: #444;
     }
+    .text-overlay {
+      position: absolute;
+      bottom: 70px; /* вище кнопки */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 600px;
+      background: rgba(0,0,0,0.4); /* напівпрозорий чорний фон */
+      color: #fff;
+      padding: 15px 20px;
+      border-radius: 5px;
+      text-align: center;
+      backdrop-filter: blur(2px);
+    }
+    .text-overlay h2 {
+      margin: 0 0 10px;
+      font-size: 1.4rem;
+    }
+    .text-overlay p {
+      margin: 0;
+      font-size: 1rem;
+    }
   </style>
 </head>
 <body>
 
   <div class="photo-block">
     <img src="1.jpg" alt="Фото 1">
+    <div class="text-overlay">
+      <h2>Товар 1</h2>
+      <p>Сучасний стиль, висока якість матеріалів.</p>
+    </div>
     <a href="#order" class="order-btn">Замовити</a>
   </div>
+
   <div class="photo-block">
     <img src="2.jpg" alt="Фото 2">
     <a href="#order" class="order-btn">Замовити</a>
   </div>
+
   <div class="photo-block">
     <img src="3.jpg" alt="Фото 3">
+    <div class="text-overlay">
+      <h2>Товар 3</h2>
+      <p>Комфорт та надійність у кожній деталі.</p>
+    </div>
     <a href="#order" class="order-btn">Замовити</a>
   </div>
+
   <div class="photo-block">
     <img src="4.jpg" alt="Фото 4">
     <a href="#order" class="order-btn">Замовити</a>
   </div>
+
   <div class="photo-block">
     <img src="5.jpg" alt="Фото 5">
+    <div class="text-overlay">
+      <h2>Товар 5</h2>
+      <p>Елегантність та практичність.</p>
+    </div>
     <a href="#order" class="order-btn">Замовити</a>
   </div>
+
   <div class="photo-block">
     <img src="6.jpg" alt="Фото 6">
     <a href="#order" class="order-btn">Замовити</a>
   </div>
+
   <div class="photo-block">
     <img src="7.jpg" alt="Фото 7">
+    <div class="text-overlay">
+      <h2>Товар 7</h2>
+      <p>Легкість та сучасні технології.</p>
+    </div>
     <a href="#order" class="order-btn">Замовити</a>
   </div>
+
   <div class="photo-block">
     <img src="8.jpg" alt="Фото 8">
     <a href="#order" class="order-btn">Замовити</a>
   </div>
+
   <div class="photo-block">
     <img src="9.jpg" alt="Фото 9">
+    <div class="text-overlay">
+      <h2>Товар 9</h2>
+      <p>Ідеальний вибір для кожного дня.</p>
+    </div>
     <a href="#order" class="order-btn">Замовити</a>
   </div>
+
   <div class="photo-block">
     <img src="10.jpg" alt="Фото 10">
     <a href="#order" class="order-btn">Замовити</a>
