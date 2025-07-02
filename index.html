@@ -68,6 +68,17 @@
       margin: 0;
       font-size: 1rem;
     }
+    .full-description {
+      max-width: 85%;
+      margin: 50px auto;
+      border: 2px dashed #2c2c2c;
+      padding: 20px;
+      border-radius: 10px;
+      background: rgba(240,240,240,0.7);
+    }
+    .full-description h2 {
+      margin-top: 0;
+    }
     @media (max-width: 768px) {
       .photo-container {
         flex-direction: column;
@@ -78,12 +89,15 @@
         margin-top: 20px;
         max-width: 100%;
       }
+      .full-description {
+        max-width: 95%;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Фото і кнопка -->
+  <!-- Фото 1 + назва -->
   <div class="photo-container">
     <div class="photo-content">
       <img src="1.jpg" alt="Nike Zoom Fly 5 Green Black">
@@ -94,87 +108,129 @@
     </div>
   </div>
 
-  <!-- Окремі блоки для кожної характеристики -->
+  <!-- Фото 2 + артикул -->
   <div class="photo-container">
+    <div class="photo-content">
+      <img src="2.jpg" alt="Артикул">
+      <a href="#order" class="order-btn">Замовити</a>
+    </div>
     <div class="description-box">
       <h2>Артикул</h2>
       <p>A3022</p>
     </div>
   </div>
 
+  <!-- Фото 3 + ціна -->
   <div class="photo-container">
+    <div class="photo-content">
+      <img src="3.jpg" alt="Ціна">
+      <a href="#order" class="order-btn">Замовити</a>
+    </div>
     <div class="description-box">
       <h2>Ціна</h2>
       <p>1800 → 1400 грн</p>
     </div>
   </div>
 
+  <!-- Фото 4 + виробник -->
   <div class="photo-container">
+    <div class="photo-content">
+      <img src="4.jpg" alt="Виробник">
+      <a href="#order" class="order-btn">Замовити</a>
+    </div>
     <div class="description-box">
       <h2>Виробник</h2>
       <p>Вʼєтнам</p>
     </div>
   </div>
 
+  <!-- Фото 5 + верх -->
   <div class="photo-container">
+    <div class="photo-content">
+      <img src="5.jpg" alt="Верх">
+      <a href="#order" class="order-btn">Замовити</a>
+    </div>
     <div class="description-box">
       <h2>Верх</h2>
       <p>Текстиль</p>
     </div>
   </div>
 
+  <!-- Фото 6 + колір -->
   <div class="photo-container">
+    <div class="photo-content">
+      <img src="6.jpg" alt="Колір">
+      <a href="#order" class="order-btn">Замовити</a>
+    </div>
     <div class="description-box">
       <h2>Колір</h2>
       <p>Зелений</p>
     </div>
   </div>
 
+  <!-- Фото 7 + підошва -->
   <div class="photo-container">
+    <div class="photo-content">
+      <img src="7.jpg" alt="Підошва">
+      <a href="#order" class="order-btn">Замовити</a>
+    </div>
     <div class="description-box">
       <h2>Підошва</h2>
       <p>Піна + гумовий протектор</p>
     </div>
   </div>
 
+  <!-- Фото 8 + розміри -->
   <div class="photo-container">
+    <div class="photo-content">
+      <img src="8.jpg" alt="Розміри">
+      <a href="#order" class="order-btn">Замовити</a>
+    </div>
     <div class="description-box">
       <h2>Розміри</h2>
       <p>41-45</p>
     </div>
   </div>
 
+  <!-- Фото 9 + сезон -->
   <div class="photo-container">
+    <div class="photo-content">
+      <img src="9.jpg" alt="Сезон">
+      <a href="#order" class="order-btn">Замовити</a>
+    </div>
     <div class="description-box">
       <h2>Сезон</h2>
       <p>Весна/літо/осінь</p>
     </div>
   </div>
 
+  <!-- Фото 10 + комплектація -->
   <div class="photo-container">
+    <div class="photo-content">
+      <img src="10.jpg" alt="Комплектація">
+      <a href="#order" class="order-btn">Замовити</a>
+    </div>
     <div class="description-box">
       <h2>Комплектація</h2>
       <p>Коробка Nike, фірмовий папір</p>
     </div>
   </div>
 
-  <!-- Повний опис у блоці Характеристики -->
-  <div class="photo-container">
-    <div class="description-box">
-      <h2>Характеристики</h2>
-      <p>
-        Nike Zoom Fly 5 Green Black<br>
-        Артикул: A3022<br>
-        Ціна: 1800 → 1400 грн<br>
-        Виробник: Вʼєтнам<br>
-        Верх: текстиль<br>
-        Колір: зелений<br>
-        Підошва: піна + гумовий протектор<br>
-        Розміри: 41-45<br>
-        Сезон: весна/літо/осінь<br>
-        Комплектація: коробка Nike, фірмовий папір
-      </p>
-    </div>
+  <!-- Повний опис -->
+  <div class="full-description">
+    <h2>Характеристики</h2>
+    <p>
+      Nike Zoom Fly 5 Green Black<br>
+      Артикул: A3022<br>
+      Ціна: 1800 → 1400 грн<br>
+      Виробник: Вʼєтнам<br>
+      Верх: текстиль<br>
+      Колір: зелений<br>
+      Підошва: піна + гумовий протектор<br>
+      Розміри: 41-45<br>
+      Сезон: весна/літо/осінь<br>
+      Комплектація: коробка Nike, фірмовий папір
+    </p>
   </div>
 
 </body>
