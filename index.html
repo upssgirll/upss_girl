@@ -1,237 +1,167 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Галерея продукту</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nike Zoom Fly 5 Green Black</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: #fff;
-      color: #111;
-    }
-    .photo-container {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      max-width: 85%;
-      margin: 50px auto;
-      gap: 30px;
-    }
-    .photo-content {
-      position: relative;
-      flex: 1 1 600px;
-      max-width: 800px;
-      overflow: hidden;
-    }
-    .photo-content img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-    .photo-content img:hover {
-      transform: scale(1.05);
-    }
-    .order-btn {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 15px 35px;
-      background: #2c2c2c;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
       color: #fff;
-      border: 1px solid rgba(200, 200, 200, 0.4);
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s;
-      backdrop-filter: blur(2px);
     }
-    .order-btn:hover {
-      background: #444;
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      background-color: #1e1e1e;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    .description-box {
-      flex: 1 1 300px;
-      max-width: 400px;
-      background: rgba(240,240,240,0.7);
-      padding: 20px;
-      border-radius: 10px;
-    }
-    .description-box h2 {
-      margin: 0 0 10px;
+    header h1 {
       font-size: 1.5rem;
+      color: #f35a00;
     }
-    .description-box p {
-      margin: 0;
-      font-size: 1rem;
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 2rem 5%;
+      max-width: 85vw;
+      margin: 0 auto;
     }
-    .full-description {
-      max-width: 85%;
-      margin: 50px auto;
-      border: 2px dashed #2c2c2c;
-      padding: 20px;
+    .item {
+      flex: 1 1 280px;
+      background-color: #1c1c1c;
       border-radius: 10px;
-      background: rgba(240,240,240,0.7);
+      overflow: hidden;
+      transition: transform 0.3s;
+      position: relative;
     }
-    .full-description h2 {
-      margin-top: 0;
+    .item:hover {
+      transform: scale(1.03);
+    }
+    .item img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    .info {
+      padding: 1rem;
+    }
+    .info h2 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #f35a00;
+    }
+    .info p {
+      font-size: 0.9rem;
+      margin: 0.5rem 0;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      border: 1px solid #f35a00;
+      border-radius: 25px;
+      background: transparent;
+      color: #f35a00;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background: #f35a00;
+      color: #fff;
+    }
+    .features {
+      padding: 2rem 5%;
+      max-width: 800px;
+      margin: 2rem auto;
+      background: #1e1e1e;
+      border-radius: 10px;
+    }
+    .features h3 {
+      font-size: 1.4rem;
+      color: #f35a00;
+    }
+    .features ul {
+      list-style: none;
+      padding: 0;
+    }
+    .features li {
+      margin: 0.5rem 0;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
     }
     @media (max-width: 768px) {
-      .photo-container {
+      .gallery {
+        padding: 1rem;
+      }
+      header {
         flex-direction: column;
-        max-width: 100%;
-        margin: 30px 0;
-      }
-      .description-box {
-        margin-top: 20px;
-        max-width: 100%;
-      }
-      .full-description {
-        max-width: 95%;
+        align-items: flex-start;
       }
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Nike Zoom Fly 5</h1>
+    <a href="#features" class="button">Замовити</a>
+  </header>
 
-  <!-- Фото 1 + назва -->
-  <div class="photo-container">
-    <div class="photo-content">
-      <img src="1.jpg" alt="Nike Zoom Fly 5 Green Black">
-      <a href="#order" class="order-btn">Замовити</a>
+  <section class="gallery">
+    <div class="item">
+      <img src="1.jpg" alt="Фото 1">
+      <div class="info">
+        <h2>Nike Zoom Fly 5</h2>
+        <p>Ціна: <del>1800</del> → <strong>1400 грн</strong></p>
+        <a href="#features" class="button">Замовити</a>
+      </div>
     </div>
-    <div class="description-box">
-      <h2>Nike Zoom Fly 5 Green Black</h2>
+    <div class="item">
+      <img src="2.jpg" alt="Фото 2">
+      <div class="info">
+        <p>Артикул: A3022</p>
+        <a href="#features" class="button">Замовити</a>
+      </div>
     </div>
-  </div>
+    <div class="item">
+      <img src="3.jpg" alt="Фото 3">
+      <div class="info">
+        <p>Колір: Зелений</p>
+        <a href="#features" class="button">Замовити</a>
+      </div>
+    </div>
+    <div class="item">
+      <img src="4.jpg" alt="Фото 4">
+      <div class="info">
+        <p>Сезон: Весна / Літо / Осінь</p>
+        <a href="#features" class="button">Замовити</a>
+      </div>
+    </div>
+    <!-- Продовжити з фото 5–10 -->
+  </section>
 
-  <!-- Фото 2 + артикул -->
-  <div class="photo-container">
-    <div class="photo-content">
-      <img src="2.jpg" alt="Артикул">
-      <a href="#order" class="order-btn">Замовити</a>
-    </div>
-    <div class="description-box">
-      <h2>Артикул</h2>
-      <p>A3022</p>
-    </div>
-  </div>
-
-  <!-- Фото 3 + ціна -->
-  <div class="photo-container">
-    <div class="photo-content">
-      <img src="3.jpg" alt="Ціна">
-      <a href="#order" class="order-btn">Замовити</a>
-    </div>
-    <div class="description-box">
-      <h2>Ціна</h2>
-      <p>1800 → 1400 грн</p>
-    </div>
-  </div>
-
-  <!-- Фото 4 + виробник -->
-  <div class="photo-container">
-    <div class="photo-content">
-      <img src="4.jpg" alt="Виробник">
-      <a href="#order" class="order-btn">Замовити</a>
-    </div>
-    <div class="description-box">
-      <h2>Виробник</h2>
-      <p>Вʼєтнам</p>
-    </div>
-  </div>
-
-  <!-- Фото 5 + верх -->
-  <div class="photo-container">
-    <div class="photo-content">
-      <img src="5.jpg" alt="Верх">
-      <a href="#order" class="order-btn">Замовити</a>
-    </div>
-    <div class="description-box">
-      <h2>Верх</h2>
-      <p>Текстиль</p>
-    </div>
-  </div>
-
-  <!-- Фото 6 + колір -->
-  <div class="photo-container">
-    <div class="photo-content">
-      <img src="6.jpg" alt="Колір">
-      <a href="#order" class="order-btn">Замовити</a>
-    </div>
-    <div class="description-box">
-      <h2>Колір</h2>
-      <p>Зелений</p>
-    </div>
-  </div>
-
-  <!-- Фото 7 + підошва -->
-  <div class="photo-container">
-    <div class="photo-content">
-      <img src="7.jpg" alt="Підошва">
-      <a href="#order" class="order-btn">Замовити</a>
-    </div>
-    <div class="description-box">
-      <h2>Підошва</h2>
-      <p>Піна + гумовий протектор</p>
-    </div>
-  </div>
-
-  <!-- Фото 8 + розміри -->
-  <div class="photo-container">
-    <div class="photo-content">
-      <img src="8.jpg" alt="Розміри">
-      <a href="#order" class="order-btn">Замовити</a>
-    </div>
-    <div class="description-box">
-      <h2>Розміри</h2>
-      <p>41-45</p>
-    </div>
-  </div>
-
-  <!-- Фото 9 + сезон -->
-  <div class="photo-container">
-    <div class="photo-content">
-      <img src="9.jpg" alt="Сезон">
-      <a href="#order" class="order-btn">Замовити</a>
-    </div>
-    <div class="description-box">
-      <h2>Сезон</h2>
-      <p>Весна/літо/осінь</p>
-    </div>
-  </div>
-
-  <!-- Фото 10 + комплектація -->
-  <div class="photo-container">
-    <div class="photo-content">
-      <img src="10.jpg" alt="Комплектація">
-      <a href="#order" class="order-btn">Замовити</a>
-    </div>
-    <div class="description-box">
-      <h2>Комплектація</h2>
-      <p>Коробка Nike, фірмовий папір</p>
-    </div>
-  </div>
-
-  <!-- Повний опис -->
-  <div class="full-description">
-    <h2>Характеристики</h2>
-    <p>
-      Nike Zoom Fly 5 Green Black<br>
-      Артикул: A3022<br>
-      Ціна: 1800 → 1400 грн<br>
-      Виробник: Вʼєтнам<br>
-      Верх: текстиль<br>
-      Колір: зелений<br>
-      Підошва: піна + гумовий протектор<br>
-      Розміри: 41-45<br>
-      Сезон: весна/літо/осінь<br>
-      Комплектація: коробка Nike, фірмовий папір
-    </p>
-  </div>
-
+  <section id="features" class="features">
+    <h3>Характеристики</h3>
+    <ul>
+      <li>Назва: Nike Zoom Fly 5 Green Black</li>
+      <li>Артикул: A3022</li>
+      <li>Ціна: 1800 → 1400 грн</li>
+      <li>Виробник: Вʼєтнам</li>
+      <li>Верх: текстиль</li>
+      <li>Колір: зелений</li>
+      <li>Підошва: піна + гумовий протектор</li>
+      <li>Розміри: 41-45</li>
+      <li>Сезон: весна / літо / осінь</li>
+      <li>Комплектація: коробка Nike, фірмовий папір</li>
+    </ul>
+  </section>
 </body>
 </html>
