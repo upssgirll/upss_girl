@@ -1,167 +1,193 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nike Zoom Fly 5 Green Black</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #121212;
-      color: #fff;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 5%;
-      background-color: #1e1e1e;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header h1 {
-      font-size: 1.5rem;
-      color: #f35a00;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      padding: 2rem 5%;
-      max-width: 85vw;
-      margin: 0 auto;
-    }
-    .item {
-      flex: 1 1 280px;
-      background-color: #1c1c1c;
-      border-radius: 10px;
-      overflow: hidden;
-      transition: transform 0.3s;
-      position: relative;
-    }
-    .item:hover {
-      transform: scale(1.03);
-    }
-    .item img {
-      width: 100%;
-      display: block;
-      object-fit: cover;
-    }
-    .info {
-      padding: 1rem;
-    }
-    .info h2 {
-      margin: 0;
-      font-size: 1.2rem;
-      color: #f35a00;
-    }
-    .info p {
-      font-size: 0.9rem;
-      margin: 0.5rem 0;
-    }
-    .button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.6rem 1.2rem;
-      border: 1px solid #f35a00;
-      border-radius: 25px;
-      background: transparent;
-      color: #f35a00;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    .button:hover {
-      background: #f35a00;
-      color: #fff;
-    }
-    .features {
-      padding: 2rem 5%;
-      max-width: 800px;
-      margin: 2rem auto;
-      background: #1e1e1e;
-      border-radius: 10px;
-    }
-    .features h3 {
-      font-size: 1.4rem;
-      color: #f35a00;
-    }
-    .features ul {
-      list-style: none;
       padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
-    .features li {
-      margin: 0.5rem 0;
-      border-bottom: 1px solid #333;
+
+    body {
+      background-color: #111;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 85%;
+      margin: auto;
+      padding: 2rem 0;
+    }
+
+    .hero {
+      position: relative;
+      background-image: url("img/your-photo.jpg"); /* заміни на своє фото */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .hero .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .order-btn {
+      background: orange;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .gallery-item {
+      background: #222;
+      padding: 1rem;
+      border-radius: 12px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .gallery-item p {
+      margin-top: 0.8rem;
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .features {
+      background: #1b1b1b;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-top: 2rem;
+    }
+
+    .features h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #444;
       padding-bottom: 0.5rem;
     }
-    @media (max-width: 768px) {
-      .gallery {
-        padding: 1rem;
-      }
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+
+    .features ul {
+      list-style: none;
+    }
+
+    .features ul li {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Nike Zoom Fly 5</h1>
-    <a href="#features" class="button">Замовити</a>
-  </header>
-
-  <section class="gallery">
-    <div class="item">
-      <img src="1.jpg" alt="Фото 1">
-      <div class="info">
-        <h2>Nike Zoom Fly 5</h2>
-        <p>Ціна: <del>1800</del> → <strong>1400 грн</strong></p>
-        <a href="#features" class="button">Замовити</a>
-      </div>
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Nike Zoom Fly 5 Green Black</h1>
+      <p>Топ якість AAA+</p>
+      <a href="#features" class="order-btn">Замовити</a>
     </div>
-    <div class="item">
-      <img src="2.jpg" alt="Фото 2">
-      <div class="info">
+  </section>
+
+  <div class="container">
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="img/1.jpg" alt="Фото 1">
+        <p>Розміри: 41-45</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/2.jpg" alt="Фото 2">
+        <p>Сезон: весна / літо / осінь</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/3.jpg" alt="Фото 3">
+        <p>Верх: текстиль</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/4.jpg" alt="Фото 4">
+        <p>Колір: зелений</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/5.jpg" alt="Фото 5">
+        <p>Підошва: піна + гумовий протектор</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/6.jpg" alt="Фото 6">
         <p>Артикул: A3022</p>
-        <a href="#features" class="button">Замовити</a>
+      </div>
+      <div class="gallery-item">
+        <img src="img/7.jpg" alt="Фото 7">
+        <p>Комплектація: коробка Nike</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/8.jpg" alt="Фото 8">
+        <p>Фірмовий пакувальний папір</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/9.jpg" alt="Фото 9">
+      </div>
+      <div class="gallery-item">
+        <img src="img/10.jpg" alt="Фото 10">
       </div>
     </div>
-    <div class="item">
-      <img src="3.jpg" alt="Фото 3">
-      <div class="info">
-        <p>Колір: Зелений</p>
-        <a href="#features" class="button">Замовити</a>
-      </div>
-    </div>
-    <div class="item">
-      <img src="4.jpg" alt="Фото 4">
-      <div class="info">
-        <p>Сезон: Весна / Літо / Осінь</p>
-        <a href="#features" class="button">Замовити</a>
-      </div>
-    </div>
-    <!-- Продовжити з фото 5–10 -->
-  </section>
 
-  <section id="features" class="features">
-    <h3>Характеристики</h3>
-    <ul>
-      <li>Назва: Nike Zoom Fly 5 Green Black</li>
-      <li>Артикул: A3022</li>
-      <li>Ціна: 1800 → 1400 грн</li>
-      <li>Виробник: Вʼєтнам</li>
-      <li>Верх: текстиль</li>
-      <li>Колір: зелений</li>
-      <li>Підошва: піна + гумовий протектор</li>
-      <li>Розміри: 41-45</li>
-      <li>Сезон: весна / літо / осінь</li>
-      <li>Комплектація: коробка Nike, фірмовий папір</li>
-    </ul>
-  </section>
+    <section id="features" class="features">
+      <h2>Характеристики</h2>
+      <ul>
+        <li>Замовити</li>
+        <li>Nike Zoom Fly 5 Green Black</li>
+        <li>Артикул: A3022</li>
+        <li>Ціна: 1800 → 1400 грн</li>
+        <li>Виробник: Вʼєтнам</li>
+        <li>Верх: текстиль</li>
+        <li>Колір: зелений</li>
+        <li>Підошва: піна + гумовий протектор</li>
+        <li>Розміри: 41-45</li>
+        <li>Сезон: весна / літо / осінь</li>
+        <li>Комплектація: коробка Nike, фірмовий папір</li>
+      </ul>
+    </section>
+  </div>
 </body>
 </html>
